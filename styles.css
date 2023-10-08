@@ -8,6 +8,7 @@ body {
     font-family: "Baskervville", serif;
     color: linen;
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 html {
     font-size: 62.5%;
@@ -43,6 +44,7 @@ main {
         1fr
       );
     row-gap: 3rem;
+    
 }
 
 .titulo {
@@ -165,8 +167,8 @@ hr {
     display: flex;
     justify-content: center;
     position: sticky;
-    top: 0.5%;
-    left: 29%;
+    top: 0.2%;
+    height: 50px;
     width: 100vw;
     background: white;
     z-index: 10;
