@@ -1,0 +1,217 @@
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Baskervville", serif;
+    color: linen;
+    background-color: rgb(255, 255, 255);
+}
+html {
+    font-size: 62.5%;
+}
+h1 {
+    font-family: "Anton", sans-serif;
+}
+h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
+}
+.text {
+    grid-column: 2/3;
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
+    column-width: 25rem;
+    text-align: justify;
+    color: black;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+.heading {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+}
+main {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(
+        2rem,
+        1fr
+      );
+    row-gap: 3rem;
+}
+
+.titulo {
+    text-align: center;
+    color: rgb(255, 123, 74);
+    font-size: 8rem;
+}
+.subtitulo {
+    font-size: 2.4rem;
+    color: rgb(255, 123, 74);
+    text-align: center;
+    font-weight: bold;
+}
+.subtitulodois {
+    font-size: 1.4rem;
+    color: rgb(255, 123, 74);
+    text-align: center;
+    font-weight: bold;
+}
+.subtitulotres {
+    font-size: 1.8rem;
+    color: rgb(255, 123, 74);
+    text-align: center;
+    font-weight: bold;
+}
+.copyright{
+    font-size: 1.4rem;
+    color: rgb(255, 123, 74);
+    text-align: center;
+}
+.image-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    /*A propriedade 'place-items' pode ser usada para definir os valores 
+  de alinhamento de itens e justificação de itens ao mesmo tempo. 
+  A propriedade place-items assume um ou dois valores. 
+  Se um valor for fornecido, ele será usado para as propriedades 
+  alinhar-items e justificar-items. Se dois valores forem fornecidos, 
+  o primeiro valor será usado para a propriedade alinhar-items e 
+  o segundo valor será usado para a propriedade justificar-items.*/
+    place-items: center;
+  }
+.image-1, .image-3 {
+    grid-column: 1/-1;
+}
+@media only screen and (max-width: 720px) {
+    .image-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .text-with-images {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .titulo {
+      font-size: 6rem;
+    }
+    .subtitulo,
+    .author,
+    .quote,
+    .list-title {
+      font-size: 1.8rem;
+    }
+    .social-icons {
+      font-size: 2rem;
+    }
+    .text {
+      font-size: 1.6rem;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .titulo {
+      font-size: 4.5rem;
+    }
+  }
+  .lists {
+    list-style-type: none;
+    margin-top: 2rem;
+  }
+  .lists li {
+    margin-bottom: 1.5rem;
+}
+.text-with-images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+}
+.first-paragraph::first-letter {
+    font-size: 6rem;
+    color: rgb(255, 123, 74);
+    float: left;
+    margin-right: 1rem;
+}
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
+}
+.quote {
+    color: rgb(255, 123, 74);
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+.quote::before {
+    content: '" ';
+}
+.quote::after {
+    content: ' "';
+}
+.headerdosite {
+    grid-column: 1/-1;
+    position: relative;
+}
+.nav {
+    display: flex;
+    justify-content: left;
+    position: sticky;
+    top: 0.5%;
+    left: 29%;
+    width: 100%;
+    background: white;
+    z-index: 10;
+}
+.nav a{
+    text-decoration: none;
+    color: rgb(255, 123, 74);
+    font-weight: bold;
+    font-size: 30px;
+}
+li{
+    list-style-type: none;
+    display: inline;
+    padding: 25px;
+    left: 20px; 
+}
+.author {
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+}
+.author-name a {
+    text-decoration: none;
+    color: rgb(255, 123, 74);
+    position: flex;
+    right: 10px;
+}
+.author-name{
+    position: sticky;
+    color: rgb(255, 123, 74);
+    align-items: center;
+}
+footer {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+}
+.social-icons {
+    grid-column: 1/-1;
+    position: relative;
+    color: rgb(255, 123, 74);
+    display: grid;
+    font-size: 2.2rem;
+    bottom: 5px;
+    grid-template-columns: repeat(2, 5fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 5fr;
+    align-items: right;
+}
